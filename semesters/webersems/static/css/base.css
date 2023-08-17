@@ -1,0 +1,216 @@
+body{
+    background-color: #29093b;
+    font-family: 'Times New Roman', Times, serif;
+    color: #E5E5E5;
+    margin: auto
+}
+
+.navbar{
+    width: 100%;
+    position: sticky;
+    flex: 2;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navitems{
+    display: flex;
+    width: 65%;
+    margin: auto;
+}
+
+.navlinks a{
+    padding: 15px;
+    text-decoration: none;
+    color: #E5E5E5;
+    font-size: 25px;
+}
+
+.navitems a:hover{
+    background-color: #616161;
+}
+
+.navlinks{
+    flex: 50%;
+}
+
+.navusers{
+    position: relative;
+}
+
+.navusers a{
+    padding: 15px;
+    text-decoration: none;
+    color: #E5E5E5;
+    font-size: 25px;
+}
+
+.navlogin{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+}
+
+.navlogin a{
+    color: black;
+    text-decoration: none;
+}
+
+.navlogin a:hover{
+    background-color: #616161;
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+}
+
+label {
+    text-align: center;
+    width: 100%;
+    padding: 12px 20px;
+    margin: auto;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#logbtn{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 5%;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #640606;
+    padding: 1em 0.5em;
+    color: #fff;
+    line-height: initial;
+}
+
+button[type="submit"]{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 15%;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #640606;
+    padding: 1em 0.5em;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+button[type="submit"]:hover{
+    background: #47035c;
+}
+
+.helptext{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    color: #616161;
+}
+
+.helptext ul{
+    list-style-type: none;
+}
+
+.add, .close{
+    margin: auto;
+    width: 65%;
+    text-align: right;
+}
+
+.close{
+    margin-top: 30px;
+}
+
+.add a, .close a{
+    color: #E5E5E5;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+
+.content{
+    margin: auto;
+    width: 65%;
+    text-align: center;
+}
+
+#createclasses, #createsemester{
+    margin: auto;
+    display: none;
+    text-align: center;
+    width: 65%;
+}
+
+#createclasses label{
+    width: 100%;
+}
+
+.classtable{
+    margin: auto;
+    width: 40%;
+    text-align: center;
+}
+
+.classtable th{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.classtable td{
+    font-size: 20px;
+}
+
+.classtable td, th{
+    border: 3px solid #E5E5E5;
+}
+
+tr:nth-child(even) {
+    background-color: #616161;
+}
+
+.radbtns{
+    position: relative;
+    display: flex;
+    flex:50%;
+    margin: auto;
+    justify-content: center;
+}
+
+.classsel{
+    position: relative;
+    display: flex;
+}
+
+.semestertable{
+    margin: auto;
+    width: 25%;
+    text-align: center;
+}
+
+
+.semestertable th{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.semestertable td{
+    font-size: 20px;
+}
+
+.semestertable td, th{
+    border: 3px solid #E5E5E5;
+}
+
+.semsec{
+    display: flex;
+    width: 65%;
+    margin: auto;
+}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block items %}{% include 'forms/userlogin.html' %}{% endblock %}
+{% load static %}
+<body>
+{% block body %}
+
+<h1>Login</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button id="logbtn" type="submit">Sign Up</button>
+</form>
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block items %}{% include 'forms/userlogin.html' %}{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block title %}
+    <title>Classes</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    <section class="add">
+        <a onclick="addclass()" href="javascript:void(0);"><i class="fa-solid fa-plus"></i></a>
+    </section>
+    
+    <table class="classtable">
+        <tr>
+          <th>School</th>
+          <th>Course Number</th>
+          <th>Credit Hours</th>
+          <th>Semesters</th>
+        </tr>
+
+        {% for x in courses %}
+
+        <tr>
+            <td>{{ x.school }}</td>
+            <td>{{ x.class_num }}</td>
+            <td>{{ x.credit_hours }}</td>
+            <td>
+                {% if x.fall_semester == 1 %}
+                    Fa
+                {% endif %}
+                {% if x.spring_semester == 1 %}
+                    Sp
+                {% endif %}
+                {% if x.summer_semester == 1 %}
+                    Su
+                {% endif %}
+                    
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <section id="createclasses">
+        <div class="close">
+            <a onclick="closeclass()" href="javascript:void(0);"><i class="fa-solid fa-x"></i></a>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Save</button>
+        </form>
+        
+    </section>
+
+
+    {% endblock %}
+</body>
+</html>

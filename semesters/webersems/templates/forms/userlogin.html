@@ -1,0 +1,12 @@
+<div class="navusers">
+    {% if user.is_authenticated %}
+    <a href="{% url 'profile' %}" class="navbar-item navbar-link">Profile</a>
+    <a href="{% url 'logout' %}" class="navbar-item navbar-link">Logout</a>
+    {% else %}
+    <a onclick="usersinfo()" href="javascript:void(0);"><i id="userlogin" class="fa-solid fa-user"></i></a>
+    <div id="userbtns" class="navlogin">
+        <a href="{% url 'login' %}" class="navbar-item navbar-link">Login</a>
+        <a href="{% url 'register' %}" class="navbar-item navbar-link">Register</a>
+    </div>
+    {% endif %}
+</div>

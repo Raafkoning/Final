@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block items %}{% include 'forms/userlogin.html' %}{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block title %}
+    <title>Semesters</title>
+    {% endblock %}
+</head>
+
+
+<body>
+    {% block body %}
+    <section class="add">
+        <a onclick="addsemester()" href="javascript:void(0);"><i class="fa-solid fa-plus"></i></a>
+    </section>
+    <section class="semsec">
+        {% for x in semester %}
+            <table class="semestertable">
+                <tr>
+                    <th>{{ x.sem_name }}</th>
+                </tr>
+                <tr>
+                    <td>{{ x.class1 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ x.class2 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ x.class3 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ x.class4 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ x.class5 }}</td>
+                </tr>
+                <br>
+            </table>
+        {% endfor %}
+    </section>
+        
+
+    </table>
+
+    <section id="createsemester">
+
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Save</button>
+        </form>
+        
+    </section>
+
+
+    {% endblock %}
+</body>
+</html>
